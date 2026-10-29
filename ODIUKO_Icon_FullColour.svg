@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-label="ODIUKO Educational Services logo"><title>ODIUKO Educational Services</title>
+      <g id="odiuko-icon" stroke-linejoin="round" stroke-linecap="round">
+        <circle cx="324" cy="291" r="54" fill="#61BCD1"/>
+        <path d="M249 395 Q249 343 302 337 Q324 334 347 337 Q400 343 400 395 L400 548 Q322 515 249 520 Z" fill="#61BCD1"/>
+        <circle cx="500" cy="228" r="69" fill="#9AB75A"/>
+        <path d="M366 366 Q366 292 438 283 Q500 275 562 283 Q634 292 634 366 L634 574 Q552 605 500 660 Q448 605 366 574 Z" fill="#9AB75A"/>
+        <circle cx="676" cy="291" r="54" fill="#DFB137"/>
+        <path d="M600 395 Q600 343 653 337 Q676 334 698 337 Q751 343 751 395 L751 520 Q678 515 600 548 Z" fill="#DFB137"/>
+        
+          <path d="M188 562 Q348 532 500 675" fill="none" stroke="#FFFFFF" stroke-width="78" stroke-linecap="butt"/>
+          <path d="M812 562 Q652 532 500 675" fill="none" stroke="#FFFFFF" stroke-width="78" stroke-linecap="butt"/>
+          <path d="M191 552 Q348 536 500 657" fill="none" stroke="#655089" stroke-width="27"/>
+          <path d="M194 602 Q355 582 500 706" fill="none" stroke="#C65C32" stroke-width="27"/>
+          <path d="M809 552 Q652 536 500 657" fill="none" stroke="#C65C32" stroke-width="27"/>
+          <path d="M806 602 Q645 582 500 706" fill="none" stroke="#50A882" stroke-width="27"/>
+          <path d="M500 641 L500 721" fill="none" stroke="#FFFFFF" stroke-width="9"/>
+        
+        <path d="M168 116 Q500 77 832 116 L832 495 Q832 716 500 878 Q168 716 168 495 Z"
+              fill="none" stroke="#B99342" stroke-width="34"/>
+      </g>
+    </svg>
