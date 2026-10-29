@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Odiuko Educational Services</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap">
+<style>
+:root{--bg:#F8F3E3;--card:#fffdf5;--text:#2b2410;--muted:#5d5230;--brown:#6F5720;--yellow:#DFB137;--blue:#61BCD1;--green:#9AB75A;--orange:#C65C32;--purple:#655089;--teal:#50A882;--ink:#2b1f05;--line:#e0d5b0;--rule:rgba(97,188,209,.22);--mar:rgba(198,92,50,.4);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1809;--card:#2a2412;--text:#f3ecd4;--muted:#cfc39b;--line:#4a4023;--rule:rgba(97,188,209,.12)}}
+:root[data-theme="dark"]{--bg:#1c1809;--card:#2a2412;--text:#f3ecd4;--muted:#cfc39b;--line:#4a4023;--rule:rgba(97,188,209,.12)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;color:var(--text);font:17px/1.65 Arial,Helvetica,sans-serif;background:linear-gradient(90deg,transparent 12px,var(--mar) 12px 14px,transparent 14px),repeating-linear-gradient(transparent 0 31px,var(--rule) 31px 32px),var(--bg);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;line-height:1.1;margin:0 0 .5em}
+h1{font-size:clamp(2.6rem,10vw,5.4rem);letter-spacing:-.02em}h2{font-size:clamp(1.8rem,6vw,3rem)}h3{font-size:1.4rem}
+p{margin:0 0 1em;max-width:60ch}a{color:inherit}
+.hand{font-family:'Caveat','Comic Sans MS',cursive;font-size:1.6rem;line-height:1.25;color:var(--purple)}
+@media (prefers-color-scheme:dark){.hand{color:var(--yellow)}}
+:focus-visible{outline:3px solid var(--purple);outline-offset:3px}
+[hidden]{display:none!important}
+header{position:sticky;top:0;z-index:5;background:var(--bg);padding-top:env(safe-area-inset-top,0px);border-bottom:2px dashed var(--line)}
+.bar{max-width:1100px;margin:0 auto;padding:.7rem 1.2rem 0.7rem 1.6rem;display:flex;gap:.8rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.logo{font:700 1.25rem Georgia,serif;text-decoration:none}.logo::before{content:"★ ";color:var(--yellow)}
+nav{display:flex;gap:.45rem;overflow-x:auto;max-width:100%;padding:.2rem}
+nav a{text-decoration:none;font-size:.92rem;padding:.4rem .9rem;border-radius:99px;white-space:nowrap;border:2px solid var(--line)}
+nav a[aria-current="page"]{background:var(--brown);border-color:var(--brown);color:#F8F3E3}
+.wrap{max-width:1100px;margin:0 auto;padding:2.6rem 1.2rem 2.6rem 1.8rem}
+.hero{display:grid;gap:2.4rem;align-items:center;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.hero p{font-size:1.2rem}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.3rem}
+.btn{display:inline-block;padding:.9rem 1.5rem;border-radius:99px;background:var(--brown);color:#F8F3E3;font-weight:700;text-decoration:none;border:3px solid var(--brown)}
+.btn.alt{background:transparent;color:var(--text);border-color:var(--text)}
+.polaroid{position:relative;background:#fff;padding:.9rem .9rem 1rem;transform:rotate(3deg);box-shadow:5px 6px 0 rgba(111,87,32,.35);max-width:360px;justify-self:center;color:#2b1f05}
+.polaroid .ph{height:260px;display:grid;place-items:center;text-align:center;background:var(--blue);border:3px dashed #2b1f05;padding:1rem;font-weight:700}
+.polaroid .hand{color:#2b1f05;margin:.7rem 0 0;font-size:1.5rem}
+.tape::before{content:"";position:absolute;top:-14px;left:50%;width:90px;height:28px;margin-left:-45px;background:rgba(223,177,55,.75);transform:rotate(-4deg)}
+.sticker{position:absolute;right:-14px;bottom:-18px;width:84px;height:84px;border-radius:50%;background:var(--yellow);color:#2b1f05;display:grid;place-items:center;text-align:center;font:700 .85rem/1.1 Arial;transform:rotate(-10deg)}
+.strip{background:var(--brown);color:#F8F3E3;overflow:hidden;white-space:nowrap;transform:rotate(-1.2deg);border-block:4px solid var(--yellow);margin:1rem -1rem;padding:.7rem 0;font:700 1.4rem Georgia,serif}
+.strip span{display:inline-block;padding-right:2rem;animation:run 26s linear infinite}
+@keyframes run{to{transform:translateX(-100%)}}
+@media (prefers-reduced-motion:reduce){.strip span{animation:none}}
+.line{position:relative;display:grid;gap:1.6rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));padding-top:2rem;margin:1.2rem 0}
+.line::before{content:"";position:absolute;top:.4rem;left:-1rem;right:-1rem;border-top:3px dashed var(--brown)}
+.pin{position:relative;padding:2rem 1.6rem 1.6rem;color:var(--ink);transform:rotate(var(--r,-2deg));box-shadow:4px 5px 0 rgba(111,87,32,.3)}
+.pin:nth-child(2){--r:1.8deg}.pin:nth-child(3){--r:-1deg}
+.pin::before{content:"";position:absolute;top:-14px;left:50%;width:70px;height:26px;margin-left:-35px;background:rgba(255,253,245,.8);transform:rotate(3deg);border:1px solid rgba(111,87,32,.3)}
+.pin .big{font:700 3rem Georgia,serif;display:block;margin-bottom:.2rem}.pin p:last-child{margin:0}
+.blue{background:var(--blue)}.green{background:var(--green)}.orange{background:var(--orange)}.yellow{background:var(--yellow)}.purple{background:var(--purple);color:#F8F3E3}.teal{background:var(--teal)}
+.paper{background:var(--card);border:2px solid var(--line);border-radius:6px;padding:1.4rem;box-shadow:3px 4px 0 rgba(111,87,32,.18)}
+.paper.ph{border-style:dashed}
+.grid{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:1.2rem 0}
+.stars{color:var(--yellow);font-size:1.5rem;letter-spacing:.1em;text-shadow:0 0 1px #2b1f05}
+ol.path{list-style:none;padding:0;margin:1.4rem 0;display:grid;gap:1.2rem;counter-reset:s}
+ol.path li{counter-increment:s;padding-left:4rem;position:relative;min-height:3rem}
+ol.path li::before{content:counter(s);position:absolute;left:0;top:-.2rem;width:3rem;height:3rem;border-radius:50%;background:var(--yellow);color:var(--ink);display:grid;place-items:center;font:700 1.5rem Georgia,serif;transform:rotate(-8deg)}
+ul.tick{padding-left:1.2rem}ul.tick li{margin-bottom:.5rem}
+details{background:var(--card);border:2px solid var(--line);border-radius:6px;padding:.9rem 1.3rem;margin-bottom:.7rem}
+summary{cursor:pointer;font-weight:700}details p{margin:.7rem 0 0}
+.muted{color:var(--muted)}
+footer{background:var(--brown);color:#F8F3E3;margin-top:2rem;border-top:6px dashed var(--yellow)}
+footer .wrap{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+footer a{display:block;text-decoration:none;margin-bottom:.3rem}footer p{margin:0 0 .3rem}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+</head>
+<body>
+<header><div class="bar">
+<a class="logo" href="#home">Odiuko</a>
+<nav aria-label="Main"><a href="#home">Home</a><a href="#tutoring">Tutoring</a><a href="#schools">Schools</a><a href="#products">Products</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main>
+<section id="home">
+<div class="wrap hero">
+<div>
+<h1>Confident readers. Capable mathematicians.</h1>
+<p>Friendly one-on-one tutoring for Basic 1 to 6, at home or online. Same teacher, same lessons, your choice.</p>
+<div class="btns"><a class="btn" href="#contact">Book a consultation</a><a class="btn alt" href="https://wa.me/2348167053677">Chat on WhatsApp</a></div>
+</div>
+<div class="polaroid tape">
+<div class="ph">[Your photo with a student]</div>
+<p class="hand">Hi, I’m Ruth. I know the look on a child’s face when it finally clicks. [Edit this note]</p>
+<div class="sticker">Basic<br>1 to 6</div>
+</div>
+</div>
+<div class="strip" aria-hidden="true"><span>Math ★ Reading ★ Spelling ★ Homework help ★ At home ★ Online ★ Math ★ Reading ★ Spelling ★ Homework help ★ At home ★ Online ★ </span><span>Math ★ Reading ★ Spelling ★ Homework help ★ At home ★ Online ★ Math ★ Reading ★ Spelling ★ Homework help ★ At home ★ Online ★ </span></div>
+<div class="wrap">
+<h2>Pinned up this term</h2>
+<div class="line">
+<div class="pin blue"><span class="big">+ −</span><h3>Math</h3><p>Strong foundations, one step at a time, until the basics feel easy.</p></div>
+<div class="pin green"><span class="big">Aa</span><h3>Reading and spelling</h3><p>Fluent readers and confident spellers, with practice at your child’s level.</p></div>
+<div class="pin orange"><span class="big">✎</span><h3>Learning support</h3><p>Homework help and study routines that make school days calmer.</p></div>
+</div></div>
+<div class="wrap">
+<h2>How it works</h2>
+<ol class="path">
+<li><strong>Book a consultation.</strong> Tell us about your child and what you want to improve.</li>
+<li><strong>We find the starting point.</strong> A short check shows what your child knows and where they need help.</li>
+<li><strong>Sessions begin.</strong> At home or online, with a plan built around your child.</li>
+<li><strong>You stay informed.</strong> Regular updates show how your child is doing.</li>
+</ol></div>
+<div class="wrap">
+<div class="pin yellow" style="--r:-1deg"><h2>At home or online?</h2><p>Both give your child the same lessons and the same standard of teaching. Pick whichever fits your family’s week.</p><a class="btn" href="#tutoring">See how tutoring works</a></div>
+</div>
+<div class="wrap">
+<h2>Gold stars from parents</h2>
+<div class="grid">
+<div class="paper ph"><p class="stars">★★★★★</p><p>“[Testimonial text]”</p><p class="hand">[Parent name]</p></div>
+<div class="paper ph"><p class="stars">★★★★★</p><p>“[Testimonial text]”</p><p class="hand">[Parent name]</p></div>
+</div>
+<p><a href="#testimonials">More from parents</a> · <a href="#faq">Common questions</a> · <a href="#about">Meet the team</a></p>
+</div>
+<div class="wrap"><div class="pin purple" style="--r:1deg"><h2>Are you a school leader?</h2><p>We also help schools with technology integration, curriculum development and instructional design.</p><a class="btn" href="#schools" style="background:#F8F3E3;color:var(--ink);border-color:#F8F3E3">Explore school services</a></div></div>
+</section>
+
+<section id="tutoring" hidden><div class="wrap">
+<h1>Tutoring</h1>
+<p>Personal tutoring for children in Basic 1 to 6.</p>
+<div class="line">
+<div class="pin blue"><span class="big">+ −</span><h3>Math</h3><p>Number sense, operations and problem solving, taught in clear steps with plenty of practice.</p></div>
+<div class="pin green"><span class="big">Aa</span><h3>Reading and spelling</h3><p>Phonics, fluency, comprehension and spelling at your child’s level.</p></div>
+<div class="pin orange"><span class="big">✎</span><h3>Learning support</h3><p>Homework help, organisation and good study habits.</p></div>
+</div>
+<h2>Choose how to learn</h2>
+<div class="grid">
+<div class="paper"><h3>In-home</h3><p>A tutor comes to you. Areas covered: [add areas in Lagos].</p></div>
+<div class="paper"><h3>Online</h3><p>Live lessons from home. You only need a device and a stable connection.</p></div>
+</div>
+<p>Our focus is Basic 1 to 6. Support for older learners (K-12) is available on request.</p>
+<h2>Pricing</h2><p>[Add pricing or pricing guide here.]</p>
+<a class="btn" href="#contact">Book a consultation</a>
+</div></section>
+
+<section id="schools" hidden><div class="wrap">
+<h1>For schools</h1>
+<p>We help schools use technology well and design learning that works for teachers and pupils.</p>
+<div class="line">
+<div class="pin purple"><h3>Strategic tech integration</h3><ul class="tick"><li>Review how technology is used today</li><li>Choose and set up tools that fit your goals</li><li>Train teachers and staff to use them</li></ul></div>
+<div class="pin teal"><h3>Instructional design and curriculum development</h3><ul class="tick"><li>Curriculum planning and lesson design</li><li>eLearning courses and digital resources</li><li>Assessments tied to learning goals</li></ul></div>
+</div>
+<p>We build our own tools too. <a href="#products">See our products</a>.</p>
+<a class="btn" href="#contact">Talk to us about your school</a>
+</div></section>
+
+<section id="products" hidden><div class="wrap">
+<h1>Our products</h1>
+<p>Tools built by Odiuko to make teaching and learning easier.</p>
+<div class="line">
+<div class="pin yellow"><h3>LearnAid</h3><p>An AI course generator that helps educators turn a topic into a structured course.</p><a class="btn" href="https://learnaid.lovable.app">Open LearnAid</a></div>
+<div class="pin blue"><h3>LearnQuest</h3><p>A learning management system for organising lessons, learners and progress in one place.</p><a class="btn" href="https://learn-quest-ii.vercel.app">Open LearnQuest</a></div>
+</div></div></section>
+
+<section id="about" hidden><div class="wrap">
+<h1>About Odiuko</h1>
+<p>Odiuko Educational Services helps children learn with confidence and helps schools teach better with technology and good design. [Add your story: why you started and what you believe about learning.]</p>
+<h2>The team</h2>
+<div class="grid">
+<div class="paper ph"><h3>Ruth Ayogu</h3><p>[Role and short bio]</p></div>
+<div class="paper ph"><h3>Praise Asogwa</h3><p>Project Lead. [Short bio]</p></div>
+<div class="paper ph"><h3>Ebere Uduji</h3><p>[Role and short bio]</p></div>
+</div></div></section>
+
+<section id="contact" hidden><div class="wrap">
+<h1>Contact us</h1>
+<p>Tell us about your child or your school. WhatsApp is the fastest way to reach us.</p>
+<div class="line">
+<div class="pin green"><h3>WhatsApp</h3><p><a href="https://wa.me/2348167053677">Message us</a></p></div>
+<div class="pin blue"><h3>Phone</h3><p><a href="tel:+2348167053677">08167053677</a></p></div>
+<div class="pin yellow"><h3>Email</h3><p><a href="mailto:chisomruth07@gmail.com">chisomruth07@gmail.com</a></p></div>
+</div></div></section>
+
+<section id="testimonials" hidden><div class="wrap">
+<h1>Gold stars from parents</h1>
+<div class="grid">
+<div class="paper ph"><p class="stars">★★★★★</p><p>“[Testimonial text]”</p><p class="hand">[Parent name]</p></div>
+<div class="paper ph"><p class="stars">★★★★★</p><p>“[Testimonial text]”</p><p class="hand">[Parent name]</p></div>
+<div class="paper ph"><p class="stars">★★★★★</p><p>“[Testimonial text]”</p><p class="hand">[Parent name]</p></div>
+</div></div></section>
+
+<section id="blog" hidden><div class="wrap">
+<h1>Blog</h1>
+<p>Practical advice on helping children learn.</p>
+<div class="grid">
+<div class="paper ph"><h3>[Post title]</h3><p>[Short summary]</p></div>
+<div class="paper ph"><h3>[Post title]</h3><p>[Short summary]</p></div>
+<div class="paper ph"><h3>[Post title]</h3><p>[Short summary]</p></div>
+</div></div></section>
+
+<section id="faq" hidden><div class="wrap">
+<h1>Questions parents ask</h1>
+<details><summary>Which classes do you tutor?</summary><p>Our focus is Basic 1 to 6. Contact us if your child is older.</p></details>
+<details><summary>Which subjects do you cover?</summary><p>Math, reading and spelling, and learning support such as homework help.</p></details>
+<details><summary>Is in-home tutoring different from online?</summary><p>No. Both offer the same lessons and the same standard of teaching.</p></details>
+<details><summary>How do I book?</summary><p>Use the contact page or message us on WhatsApp. We will talk through your child’s needs and agree a plan.</p></details>
+<details><summary>How will I know my child is improving?</summary><p>You will receive regular updates on what was covered and how your child is doing.</p></details>
+<p class="muted">[Add more questions and answers here.]</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<div><h3>Odiuko Educational Services</h3><p>Tutoring for Basic 1 to 6. Technology and curriculum support for schools.</p></div>
+<div><a href="#tutoring">Tutoring</a><a href="#schools">For Schools</a><a href="#products">Products</a><a href="#about">About</a></div>
+<div><a href="#testimonials">Testimonials</a><a href="#blog">Blog</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
+<div><p>08167053677</p><p>chisomruth07@gmail.com</p></div>
+</div></footer>
+
+<script>
+(function(){
+var pages=[].slice.call(document.querySelectorAll('main > section'));
+function route(){
+var h=(location.hash||'#home').slice(1);
+var p=pages.filter(function(s){return s.id===h})[0]||pages[0];
+pages.forEach(function(s){s.hidden=s!==p});
+[].forEach.call(document.querySelectorAll('nav a'),function(a){
+a.setAttribute('aria-current',a.getAttribute('href')==='#'+p.id?'page':'false')});
+window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',route);route();
+})();
+</script>
+</body>
+</html>
