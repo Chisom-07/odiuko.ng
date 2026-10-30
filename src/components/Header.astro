@@ -1,0 +1,25 @@
+---
+interface Props {
+  currentPath?: string;
+}
+const { currentPath = "/" } = Astro.props;
+
+const navItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Tutoring', href: '/tutoring' },
+  { name: 'Schools', href: '/schools' },
+  { name: 'Products', href: '/products' },
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' },
+];
+---
+<header>
+  <div class="bar">
+    <a class="logo" href="/"><img src="/logo.svg" alt="Odiuko Educational Services" height="40"></a>
+    <nav aria-label="Main">
+      {navItems.map(item => (
+        <a href={item.href} aria-current={currentPath === item.href ? "page" : "false"}>{item.name}</a>
+      ))}
+    </nav>
+  </div>
+</header>

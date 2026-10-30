@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+---
+<BaseLayout title="Blog - Odiuko Educational Services">
+  <div class="wrap">
+    <h1>Blog</h1>
+    <p>Practical advice on helping children learn.</p>
+    <div class="grid">
+      {posts.map(post => (
+        <a href={`/blog/${post.slug}`} style="text-decoration:none">
+          <div class="paper">
+            <h3>{post.data.title}</h3>
+            <p>{post.data.description}</p>
+            <span class="muted">{post.data.date}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
