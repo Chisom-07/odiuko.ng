@@ -1,36 +1,80 @@
-<footer class="site-footer">
- <div class="wrap">
-  <div class="footer-container">
-    <div class="footer-col">
+---
+---
+<footer>
+  <div class="wrap">
+    <div>
       <h3>Quick Links</h3>
-      <ul>
-        <li><a href="/tutoring">Tutoring</a></li>
-        <li><a href="/schools">For Schools</a></li>
-        <li><a href="/products">Products</a></li>
-        <li><a href="/about">About</a></li>
-      </ul>
+      <a href="/tutoring">Tutoring</a>
+      <a href="/schools">For Schools</a>
+      <a href="/products">Products</a>
+      <a href="/about">About</a>
     </div>
-
-    <div class="footer-col">
+    <div>
       <h3>Support</h3>
-      <ul>
-        <li><a href="/testimonials">Testimonials</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/faq">FAQ</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
+      <a href="/testimonials">Testimonials</a>
+      <a href="/blog">Blog</a>
+      <a href="/faq">FAQ</a>
+      <a href="/contact">Contact</a>
     </div>
-
-    <div class="footer-col">
+    <div>
       <h3>Get in Touch</h3>
       <p>08167053677</p>
       <p>admin@odiuko.ng</p>
-      <p><a href="https://linkedin.com" target="_blank">LinkedIn</a></p>
+      <p><a href="https://www.linkedin.com/company/odiuko-educational-services/" target="_blank" rel="noopener">LinkedIn</a></p>
     </div>
   </div>
-</div>
 
-  <div class="footer-bottom">
-    <p>&copy; 2026 Odiuko Educational Services. All rights reserved.</p>
-  </div>
+  <p>&copy; 2026 Odiuko Educational Services. All rights reserved.</p>
 </footer>
+
+<style>
+  footer {
+    background-color: #6F5720; /* Heritage Brown */
+    color: #F5F5DC;
+    padding: 3rem 2rem 1.5rem 2rem;
+  }
+
+  .wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.2);
+  }
+
+  .wrap div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .wrap h3 {
+    margin: 0;
+    font-family: Georgia, serif;
+  }
+
+  .wrap p {
+    margin: 0;
+  }
+
+  footer a {
+    color: #F5F5DC;
+    text-decoration: none;
+    opacity: 0.8;
+  }
+
+  footer a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  footer > p {
+    max-width: 1100px;
+    margin: 1.5rem auto 0 auto;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+</style>
