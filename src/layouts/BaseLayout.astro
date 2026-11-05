@@ -4,10 +4,15 @@ import Footer from '../components/Footer.astro';
 
 interface Props {
   title?: string;
+  description?: string;
   currentPath?: string;
 }
 
-const { title = "Odiuko Educational Services", currentPath = "/" } = Astro.props;
+const {
+  title = "Odiuko Educational Services",
+  description = "Online and in-home tutoring in Maths, reading and spelling for Basic 1 to 6, plus EdTech and instructional design support for schools.",
+  currentPath = "/"
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -17,6 +22,7 @@ const { title = "Odiuko Educational Services", currentPath = "/" } = Astro.props
 <meta name="google-site-verification" content="n0cbqqN6LcZ9HiEK2Ali7ytGJ_s9v8lqyY6KJZcJ3Cs" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{title}</title>
+<meta name="description" content={description}>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap">
 <style is:global>
