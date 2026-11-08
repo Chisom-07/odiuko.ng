@@ -2,7 +2,7 @@
 ---
 <footer>
   <div class="wrap">
-    <div>
+    <div class="brand">
       <h3>Odiuko Educational Services</h3>
       <p class="tagline">Confident Learners!</p>
       <p><a href="mailto:info@odiuko.ng">info@odiuko.ng</a></p>
@@ -26,14 +26,16 @@
         </a>
       </div>
     </div>
-    <div>
+
+    <div class="col col-mid">
       <h3>Quick Links</h3>
       <a href="/tutoring">Tutoring</a>
       <a href="/schools">For Schools</a>
       <a href="/products">Products</a>
       <a href="/about">About</a>
     </div>
-    <div>
+
+    <div class="col col-end">
       <h3>Support</h3>
       <a href="/testimonials">Testimonials</a>
       <a href="/blog">Blog</a>
@@ -44,12 +46,114 @@
 
   <div class="bottom">
     <p>&copy; 2026 Odiuko Educational Services. All rights reserved.</p>
-    <p>Tutoring and learning support services. Results vary by learner.</p>
+    <p>We provide tutoring and learning support. We do not guarantee specific grades or exam results.</p>
   </div>
 </footer>
 
 <style>
   footer {
-    background: linear-gradient(180deg, #4a3a14 0%, #6F5720 100%);
+    background: #6F5720 !important;
     color: #F5F5DC;
-    padding:
+    padding: 3rem 4rem 1.5rem 4rem;
+  }
+
+  footer .wrap {
+    margin: 0;
+    max-width: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(245, 245, 220, 0.2);
+  }
+
+  footer .brand,
+  footer .col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  footer .col-mid { align-items: center; }
+  footer .col-end { align-items: flex-end; }
+
+  footer .brand h3 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 1.4rem;
+    color: #F5F5DC;
+  }
+
+  footer .col h3 {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #DFB137;
+  }
+
+  footer .wrap p { margin: 0; }
+  footer .tagline { opacity: 0.85; }
+
+  footer a {
+    color: #F5F5DC;
+    text-decoration: none;
+    opacity: 0.85;
+  }
+
+  footer a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  footer .brand .social {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+    width: auto;
+  }
+
+  footer .brand .social a {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(245, 245, 220, 0.4);
+    opacity: 1;
+  }
+
+  footer .brand .social a:hover {
+    color: #DFB137;
+    border-color: #DFB137;
+    text-decoration: none;
+  }
+
+  footer .bottom {
+    margin: 1.5rem 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  footer .bottom p { margin: 0; }
+
+  @media (max-width: 700px) {
+    footer { padding: 2rem 1.5rem 1.5rem 1.5rem; }
+    footer .wrap { grid-template-columns: 1fr 1fr; }
+    footer .brand { grid-column: 1 / -1; }
+    footer .col-mid,
+    footer .col-end { align-items: flex-start; }
+    footer .bottom { flex-direction: column; }
+  }
+</style>
