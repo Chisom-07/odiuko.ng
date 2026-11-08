@@ -3,7 +3,13 @@
 <footer>
   <div class="wrap">
     <div class="brand">
-      <img src="logo.svg" alt= odiuko educational services logo" class="footer-logo">
+      <a href="/" class="footer-logo" aria-label="Odiuko Educational Services">
+        <img src="logo.svg" alt="" />
+        <span class="footer-logo-text">
+          <span class="footer-logo-name">ODIUKO</span>
+          <span class="footer-logo-sub">EDUCATIONAL SERVICES</span>
+        </span>
+      </a>
       <p class="tagline">Confident Learners!</p>
       <p><a href="mailto:info@odiuko.ng">info@odiuko.ng</a></p>
       <div class="social">
@@ -77,13 +83,6 @@
   footer .col-mid { align-items: center; }
   footer .col-end { align-items: flex-end; }
 
-  footer .brand h3 {
-    margin: 0;
-    font-family: Georgia, serif;
-    font-size: 1.4rem;
-    color: #F5F5DC;
-  }
-
   footer .col h3 {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -137,6 +136,50 @@
     text-decoration: none;
   }
 
+  footer .brand .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.5rem, 2vw, 1rem);
+    opacity: 1;
+    text-decoration: none;
+    max-width: 100%;
+  }
+
+  footer .brand .footer-logo:hover {
+    text-decoration: none;
+  }
+
+  footer .brand .footer-logo img {
+    height: clamp(48px, 8vw, 80px);
+    width: auto;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  footer .footer-logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-width: 0;
+    color: #FFFFFF;
+  }
+
+  footer .footer-logo-name {
+    font-family: Georgia, serif;
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    letter-spacing: 0.08em;
+    line-height: 1;
+    color: #FFFFFF;
+  }
+
+  footer .footer-logo-sub {
+    font-family: Arial, sans-serif;
+    font-size: clamp(0.5rem, 1.2vw, 0.6rem);
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+  }
+
   footer .bottom {
     margin: 1.5rem 0 0 0;
     display: flex;
@@ -148,24 +191,18 @@
 
   footer .bottom p { margin: 0; }
 
+  @media (max-width: 900px) {
+    footer { padding: 2.5rem 2rem 1.5rem 2rem; }
+    footer .wrap { gap: 1.5rem; }
+  }
+
   @media (max-width: 700px) {
     footer { padding: 2rem 1.5rem 1.5rem 1.5rem; }
     footer .wrap { grid-template-columns: 1fr 1fr; }
     footer .brand { grid-column: 1 / -1; }
     footer .col-mid,
     footer .col-end { align-items: flex-start; }
+    footer .brand .footer-logo { justify-content: flex-start; }
     footer .bottom { flex-direction: column; }
   }
-/* Default size for mobile screens */
-.footer-logo {
-  max-height: 34px;
-  width: auto;
-}
-
-/* Larger size for tablets and computers (screens 768px wide and up) */
-@media (min-width: 768px) {
-  .footer-logo {
-    max-height: 45px;
-  }
-}
 </style>
