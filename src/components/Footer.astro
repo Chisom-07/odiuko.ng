@@ -2,7 +2,11 @@
   <div class="wrap">
     <div class="brand">
       <a href="/" class="footer-logo" aria-label="Odiuko Educational Services">
-        <img src="logo.svg" alt="Odiuko Educational Services Logo" />
+        <img src="logo.svg" alt="Odiuko Logo" />
+        <span class="footer-logo-text">
+          <span class="footer-logo-name">ODIUKO</span>
+          <span class="footer-logo-sub">EDUCATIONAL SERVICES</span>
+        </span>
       </a>
       <p class="tagline">Confident Learners!</p>
       <p><a href="mailto:info@odiuko.ng" class="footer-email-link">info@odiuko.ng</a></p>
@@ -44,12 +48,15 @@
     </div>
   </div>
 
+  <!-- Bottom section restructured so privacy policy sits cleanly -->
   <div class="bottom">
     <div class="bottom-left">
       <p>&copy; 2026 Odiuko Educational Services. All rights reserved.</p>
-      <a href="/privacy">Privacy Policy</a>
     </div>
-    <p>We provide tutoring and learning support. We do not guarantee specific grades or exam results.</p>
+    <div class="bottom-right">
+      <a href="/privacy">Privacy Policy</a>
+      <p class="disclaimer">We provide tutoring and learning support. We do not guarantee specific grades or exam results.</p>
+    </div>
   </div>
 </footer>
 
@@ -140,13 +147,16 @@
     text-decoration: none;
   }
 
+  /* Locked layout for logo and text */
   footer .brand .footer-logo {
-    display: inline-flex !important;
+    display: flex !important;
+    flex-direction: row !important;
     align-items: center;
     justify-content: flex-start !important;
     align-self: flex-start;
     width: fit-content !important;
     max-width: 100%;
+    gap: 0.75rem !important;
     opacity: 1;
     text-decoration: none;
   }
@@ -156,7 +166,7 @@
   }
 
   footer .brand .footer-logo img {
-    height: clamp(40px, 6vw, 65px);
+    height: 38px;
     width: auto;
     max-width: none;
     margin: 0;
@@ -164,6 +174,37 @@
     flex: 0 0 auto;
   }
 
+  footer .footer-logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    text-align: left;
+    color: #FFFFFF;
+    white-space: nowrap; /* Prevents text from breaking or shifting lines */
+  }
+
+  footer .footer-logo-name {
+    font-family: Georgia, serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+
+  footer .footer-logo-sub {
+    font-family: Arial, sans-serif;
+    font-size: 0.48rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+  }
+
+  /* Bottom bar layout fixes */
   footer .bottom {
     margin: 1.5rem 0 0 0;
     display: flex;
@@ -176,11 +217,15 @@
 
   footer .bottom p { margin: 0; }
 
-  footer .bottom-left {
+  footer .bottom-right {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  footer .bottom-right a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   @media (max-width: 900px) {
@@ -194,6 +239,7 @@
     footer .brand { grid-column: 1 / -1; }
     footer .col-mid,
     footer .col-end { align-items: flex-start; }
-    footer .bottom { flex-direction: column; align-items: flex-start; }
+    footer .bottom { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+    footer .bottom-right { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
   }
 </style>
