@@ -51,7 +51,10 @@
   </div>
 
   <div class="bottom">
-    <p>&copy; 2026 Odiuko Educational Services. All rights reserved.</p>
+    <div class="bottom-left">
+      <p>&copy; 2026 Odiuko Educational Services. All rights reserved.</p>
+      <a href="/privacy">Privacy Policy</a>
+    </div>
     <p>We provide tutoring and learning support. We do not guarantee specific grades or exam results.</p>
   </div>
 </footer>
@@ -137,12 +140,16 @@
   }
 
   footer .brand .footer-logo {
-    display: flex;
+    display: inline-flex !important;
+    flex-direction: row !important;
     align-items: center;
-    gap: clamp(0.5rem, 2vw, 1rem);
+    justify-content: flex-start !important;
+    align-self: flex-start;
+    width: fit-content !important;
+    max-width: 100%;
+    gap: clamp(0.5rem, 1.5vw, 0.9rem) !important;
     opacity: 1;
     text-decoration: none;
-    max-width: 100%;
   }
 
   footer .brand .footer-logo:hover {
@@ -152,15 +159,21 @@
   footer .brand .footer-logo img {
     height: clamp(48px, 8vw, 80px);
     width: auto;
+    max-width: none;
+    margin: 0;
     display: block;
-    flex-shrink: 0;
+    flex: 0 0 auto;
   }
 
   footer .footer-logo-text {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 0.3rem;
+    margin: 0;
+    padding: 0;
     min-width: 0;
+    text-align: left;
     color: #FFFFFF;
   }
 
@@ -184,12 +197,20 @@
     margin: 1.5rem 0 0 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 1rem;
     font-size: 0.8rem;
-    opacity: 0.8;
+    opacity: 0.85;
   }
 
   footer .bottom p { margin: 0; }
+
+  footer .bottom-left {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+  }
 
   @media (max-width: 900px) {
     footer { padding: 2.5rem 2rem 1.5rem 2rem; }
@@ -202,7 +223,6 @@
     footer .brand { grid-column: 1 / -1; }
     footer .col-mid,
     footer .col-end { align-items: flex-start; }
-    footer .brand .footer-logo { justify-content: flex-start; }
-    footer .bottom { flex-direction: column; }
+    footer .bottom { flex-direction: column; align-items: flex-start; }
   }
 </style>
