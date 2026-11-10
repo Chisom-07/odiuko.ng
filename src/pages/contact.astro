@@ -13,3 +13,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </div>
 </BaseLayout>
+<style>
+  .line {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.6rem;
+  }
+  .pin a {
+    font-weight: 700;
+    color: var(--ink);
+  }
+</style>
